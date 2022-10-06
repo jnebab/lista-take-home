@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@formkit/auto-animate": "1.0.0-beta.3",
     "@tailwindcss/typography": "^0.5.7",
     "daisyui": "^2.31.0",
     "react": "^18.2.0",

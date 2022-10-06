@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@formkit/auto-animate': 1.0.0-beta.3
   '@tailwindcss/typography': ^0.5.7
   '@types/react': ^18.0.17
   '@types/react-dom': ^18.0.6
@@ -17,6 +18,7 @@ specifiers:
   vite: ^3.1.0
 
 dependencies:
+  '@formkit/auto-animate': 1.0.0-beta.3
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.1.8
   daisyui: 2.31.0_5zjlt5w4ir2cay3te66iu3k3ji
   react: 18.2.0
@@ -320,6 +322,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@formkit/auto-animate/1.0.0-beta.3:
+    resolution: {integrity: sha512-glsi+ytwQpxT/Ctr9GtcIfVr4dO6mJ04mQbNU8MFSdCdqMopHtyfU5Fib0+9lNFIeR0luY4/0NW95/2R5pKsag==}
+    dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}

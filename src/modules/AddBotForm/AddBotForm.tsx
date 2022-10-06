@@ -58,7 +58,6 @@ export default function AddBotForm({
     <div>
       <div className="form-control flex flex-row gap-4 ">
         <input
-          minLength={2}
           onChange={handleBotNameChange}
           defaultValue={bot?.name}
           type="text"
@@ -66,7 +65,6 @@ export default function AddBotForm({
           className="input input-bordered rounded-lg focus:outline-none text-almostBlack"
         />
         <input
-          minLength={10}
           onChange={handleBotDescChange}
           defaultValue={bot?.description}
           type="text"

@@ -2,7 +2,6 @@ import useLocalStorage from "../../hooks/useLocalStorage";
 import bots from "../../mock/bots";
 import AddBotForm from "../AddBotForm";
 import { useState } from "react";
-
 const baseURL = `https://avatars.dicebear.com/api/bottts`;
 
 export type Bot = {
