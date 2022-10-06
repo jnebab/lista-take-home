@@ -53,9 +53,9 @@ function App() {
   };
 
   return (
-    <main className="h-screen w-screen bg-black">
-      <div className="h-full w-full max-w-[1440px] mx-auto flex flex-col justify-start items-center py-[45px] px-[80px]">
-        <div className="flex items-center w-full justify-between mb-8">
+    <main className="lg:h-screen w-screen ">
+      <div className="h-full w-full max-w-[1440px] mx-auto flex flex-col justify-start items-center p-6 lg:py-[45px] lg:px-[80px]">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 items-center w-full justify-between mb-8">
           <h1 className="text-3xl font-bold text-white">Lista Bots</h1>
           <div>
             <div className="form-control">
@@ -86,13 +86,13 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="flex justify-start items-center w-full mb-8 ">
+        <div className="flex justify-center lg:justify-start items-center w-full mb-8">
           {showAddForm ? (
             <AddBotForm onCancel={handleAddFormView} onAddBot={handleAddBot} />
           ) : (
             <button
               onClick={handleAddFormView}
-              className="btn bg-seledyn-600 text-white rounded-lg hover:bg-seledyn-500 font-semibold"
+              className="btn bg-seledyn-600 text-white rounded-lg hover:bg-seledyn-500 font-semibold w-[70%] lg:w-[8rem]"
             >
               Add new bot
             </button>

@@ -56,7 +56,7 @@ export default function AddBotForm({
 
   return (
     <div>
-      <div className="form-control flex flex-row gap-4 ">
+      <div className="form-control flex lg:flex-row gap-4 ">
         <input
           onChange={handleBotNameChange}
           defaultValue={bot?.name}
