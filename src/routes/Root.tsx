@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import AddBotForm from "./modules/AddBotForm";
-import BotItem, { Bot } from "./modules/BotItem/BotItem";
-import useLocalStorage from "./hooks/useLocalStorage";
-import { useDebounce } from "./hooks/useDebounce";
-import bots from "./mock/bots";
+import AddBotForm from "../modules/AddBotForm";
+import BotItem, { Bot } from "../modules/BotItem/BotItem";
+import useLocalStorage from "../hooks/useLocalStorage";
+import { useDebounce } from "../hooks/useDebounce";
+import bots from "../mock/bots";
 
-function App() {
+export default function Root() {
   const [localBots, setLocalBots] = useLocalStorage("LISTA_BOTS", bots);
   const [showAddForm, setShowAddForm] = useState(false);
   const [listaBots, setListaBots] = useState<Bot[]>(localBots);
@@ -115,5 +115,3 @@ function App() {
     </main>
   );
 }
-
-export default App;

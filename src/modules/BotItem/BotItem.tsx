@@ -1,8 +1,9 @@
+import useGetBotImageURL from "../../hooks/useGetBotImageURL";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import bots from "../../mock/bots";
 import AddBotForm from "../AddBotForm";
-import { useState } from "react";
-const baseURL = `https://avatars.dicebear.com/api/bottts`;
 
 export type Bot = {
   id: string;
@@ -20,8 +21,9 @@ export default function BotItem({
   onEditBot: (updatedBots: Bot[]) => void;
 }) {
   const [isEdit, setIsEdit] = useState(false);
-  const [localBots, setLocalBots] = useLocalStorage("LISTA_BOTS", bots);
-  const url = `${baseURL}/${bot.id}.svg`;
+  const [localBots] = useLocalStorage("LISTA_BOTS", bots);
+  const navigate = useNavigate();
+  const url = useGetBotImageURL(bot?.id as string);
 
   const handleEditForm = () => {
     setIsEdit((old) => !old);
@@ -32,6 +34,9 @@ export default function BotItem({
     onRemoveBot(filteredBots);
   };
 
+  const handleNavigateToBot = () => {
+    navigate(`/bots/${bot.id}`);
+  };
   return (
     <div className="bg-transgray rounded-2xl py-8 lg:py-3 px-8 w-full text-white flex flex-col lg:flex-row items-center lg:justify-between gap-4 lg:gap-0">
       <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-4">
@@ -53,7 +58,7 @@ export default function BotItem({
       ) : (
         <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-4 w-full lg:w-fit">
           <button
-            onClick={handleEditForm}
+            onClick={handleNavigateToBot}
             className="btn bg-seledyn-600 text-white rounded-lg hover:bg-seledyn-500 font-semibold w-full lg:w-fit"
           >
             View
