@@ -23,8 +23,8 @@ export default function Root() {
   };
 
   const handleAddBot = (bot: Bot) => {
-    setListaBots([...listaBots, bot]);
-    setLocalBots([...localBots, bot]);
+    setListaBots([bot, ...listaBots]);
+    setLocalBots([bot, ...localBots]);
   };
 
   const handleEditBot = (updatedBots: Bot[]) => {
