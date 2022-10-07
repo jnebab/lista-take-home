@@ -25,7 +25,7 @@ export default function Bot() {
           <h3 className="text-5xl">
             Hi, my name is{" "}
             <span
-              className="font-bold bg-gradient-to-b from-seledyn-500 to-cabaret-500 bg-clip-text"
+              className="font-bold capitalize bg-gradient-to-b from-seledyn-500 to-cabaret-500 bg-clip-text"
               style={{
                 WebkitTextFillColor: "transparent",
               }}
